@@ -264,8 +264,9 @@ body::after {
     display: none;
 
     border: 0;
+    
 
-    background: var(--gold-dark);
+    background: var(--black);
 
     cursor: pointer;
 }
