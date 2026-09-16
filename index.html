@@ -37,7 +37,9 @@
 
             <a href="#top" class="brand">
 
-                <span class="brand-mark"><img src="images/my-headshot.png" alt="Emmanuel Onukwue"></span>
+                <span class="brand-mark">
+                    <img src="images/my-headshot.png" alt="Emmanuel Onukwue">
+                </span>
 
                 <span class="brand-text">
                     <strong>EMMANUEL ONUKWUE</strong>
@@ -85,6 +87,7 @@
         <!-- ================= HERO ================= -->
 
         <section class="hero container">
+
             <!-- TERMINAL -->
 
             <div class="terminal reveal delay">
@@ -202,6 +205,9 @@
 
             </div>
 
+
+            <!-- HERO COPY -->
+
             <div class="hero-copy reveal">
 
                 <p class="eyebrow">
@@ -233,7 +239,6 @@
                         <span>↓</span>
                     </a>
 
-                    <!-- Replace with your real GitHub profile -->
                     <a
                         href="https://github.com/emmaonukwue"
                         target="_blank"
@@ -591,7 +596,9 @@
 
                     <article class="project-card featured reveal">
 
-                        <div class="project-image">
+                        <div class="project-image"
+                             data-project="TeachVora"
+                             data-gallery="images/projects/teachvora.webp">
 
                             <img src="images/projects/teachvora.webp"
                                 alt="TeachVora project preview"
@@ -660,11 +667,13 @@
 
                     <article class="project-card reveal">
 
-                        <div class="project-image">
+                        <div class="project-image"
+                             data-project="BygMart"
+                             data-gallery="images/projects/bygmart.webp">
 
                             <img
                                 src="images/projects/bygmart.webp"
-                                alt="M Store project preview"
+                                alt="BygMart project preview"
                             >
 
                         </div>
@@ -727,7 +736,9 @@
 
                     <article class="project-card reveal">
 
-                        <div class="project-image">
+                        <div class="project-image"
+                             data-project="HR &amp; Workflow Automation"
+                             data-gallery="images/projects/hr-workflow-automation2.webp">
 
                             <img
                                 src="images/projects/hr-workflow-automation2.webp"
@@ -795,7 +806,9 @@
 
                     <article class="project-card reveal">
 
-                        <div class="project-image">
+                        <div class="project-image"
+                             data-project="Software Portfolio"
+                             data-gallery="images/projects/software-portfolio.webp">
 
                             <img
                                 src="images/projects/software-portfolio.webp"
@@ -868,14 +881,14 @@
 
                     <article class="project-card reveal">
 
-                        <div class="project-image">
+                        <div class="project-image"
+                             data-project="Glanville Group Pty"
+                             data-gallery="images/projects/glanville.webp">
 
                             <img
                                 src="images/projects/glanville.webp"
                                 alt="Glanville Group Pty project preview"
                             >
-
-                            
 
                         </div>
 
@@ -941,12 +954,15 @@
                         </div>
 
                     </article>
-                    
+
+
                     <!-- ELSAHAL GROUP -->
 
                     <article class="project-card reveal">
 
-                        <div class="project-image">
+                        <div class="project-image"
+                             data-project="Elsahal Group"
+                             data-gallery="images/projects/elsahal.webp">
 
                             <img
                                 src="images/projects/elsahal.webp"
@@ -1017,11 +1033,14 @@
 
                     </article>
 
+
                     <!-- BLAQLOADED -->
 
                     <article class="project-card reveal">
 
-                        <div class="project-image">
+                        <div class="project-image"
+                             data-project="Blaqloaded Media"
+                             data-gallery="images/projects/blaqloaded.webp">
 
                             <img
                                 src="images/projects/blaqloaded.webp"
@@ -1409,6 +1428,68 @@
         </div>
 
     </footer>
+
+
+    <!-- ================= PROJECT GALLERY MODAL ================= -->
+
+    <div
+        class="project-modal"
+        id="projectModal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Project image gallery"
+    >
+
+        <div class="modal-backdrop" data-close></div>
+
+        <button class="modal-close" aria-label="Close gallery" data-close>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <div class="modal-content">
+
+            <header class="modal-header">
+
+                <span class="modal-project" id="modalProject"></span>
+
+                <span class="modal-counter">
+                    <span id="modalCurrent">1</span>
+                    <i>/</i>
+                    <span id="modalTotal">1</span>
+                </span>
+
+            </header>
+
+
+            <div class="modal-stage">
+
+                <button class="modal-nav prev" aria-label="Previous image">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <figure class="modal-figure">
+                    <img class="modal-img" id="modalImg" src="" alt="" />
+                </figure>
+
+                <button class="modal-nav next" aria-label="Next image">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+            </div>
+
+
+            <div class="modal-thumbs" id="modalThumbs"></div>
+
+        </div>
+
+    </div>
 
 
     <!-- JavaScript -->
